@@ -1,0 +1,47 @@
+.container {
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 20px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inp{
+    margin: 5px;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.mybtn{
+    width: 300px;
+}
+
+.myImg {
+    width: 300px;
+    height: 300px;
+}
