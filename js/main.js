@@ -1,6 +1,6 @@
 const cards = document.querySelector('.cards')
 
-fetch('http://localhost:3000/') // Отправка GET запроса на сервер
+fetch('https://nodejs-production-cfdf.up.railway.app/') // Отправка GET запроса на сервер
     .then(response => response.json()) // Преобразование полученных данных в JSON
     .then(data => {
         // Использование полученного массива данных
@@ -12,7 +12,7 @@ fetch('http://localhost:3000/') // Отправка GET запроса на се
                 <img src=${e.img ? e.img : ''} class="card-img-top myImg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${e.name}</h5>
-                    <p class="card-text">${e.age} years old</p>
+                    <p class="card-text">${e.age}</p>
                     <button type="button" class="btn btn-danger delete">Delete</button>
                 </div>
             </div>`;
@@ -38,7 +38,7 @@ form.addEventListener('submit', (e) => {
     inpAge.style.border = age.length === 0 ? '2px solid red' : '1px solid gray';
     inpImg.style.border = age.length === 8 ? '2px solid red' : '1px solid gray';
 
-    fetch('http://localhost:3000/user', {
+    fetch('https://nodejs-production-cfdf.up.railway.app/user', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ document.addEventListener('click', (event) => {
         const card = event.target.closest('.card');
         const name = card.querySelector('.card-title').textContent;
 
-        fetch('http://localhost:3000/delete', {
+        fetch('https://nodejs-production-cfdf.up.railway.app/delete', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
